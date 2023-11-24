@@ -111,7 +111,7 @@
   fName.addEventListener("blur", (e) => {
     const { value, style } = e.target;
     if (!value || !/^[a-zA-Z]+$/.test(value)) {
-      error = document.getElementById("error");
+      const error = document.getElementById("error");
       error.innerText = "Enter the Name";
       error.style.display = "block";
       error.style.color = "red";
@@ -127,7 +127,7 @@
   mName.addEventListener("blur", (e) => {
     const { value, style } = e.target;
     if (!value || !/^[a-zA-Z]+$/.test(value)) {
-      error2 = document.getElementById("error2");
+      const error2 = document.getElementById("error2");
       error2.innerText = "Enter the Name";
       error2.style.display = "block";
       error2.style.color = "red";
@@ -142,7 +142,7 @@
   lName.addEventListener("blur", (e) => {
     const { value, style } = e.target;
     if (!value || !/^[a-zA-Z]+$/.test(value)) {
-      error3 = document.getElementById("error3");
+      const error3 = document.getElementById("error3");
       error3.innerText = "Enter the Name";
       error3.style.display = "block";
       error3.style.color = "red";
@@ -160,7 +160,7 @@
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     if (!emailRegex.test(value)) {
-      error4 = document.getElementById("error4");
+      const error4 = document.getElementById("error4");
       error4.innerText = "Enter the valid Email";
       error4.style.display = "block";
       error4.style.color = "red";
@@ -178,7 +178,7 @@
       !value ||
       !/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$/.test(value)
     ) {
-      error5 = document.getElementById("error5");
+      const error5 = document.getElementById("error5");
       error5.innerText = "The password have min 8 char and max 12";
       error5.style.display = "block";
       error5.style.color = "red";
@@ -193,7 +193,7 @@
   conPassword.addEventListener("blur", (e) => {
     const { value, style } = e.target;
     if (value !== password.value) {
-      error6 = document.getElementById("error6");
+      const error6 = document.getElementById("error6");
       error6.innerText = "The Confirm Password is not matched with Password";
       error6.style.display = "block";
       error6.style.color = "red";
@@ -210,7 +210,7 @@
     let uDate = new Date(value);
     let currentDate = new Date();
     if (uDate > new Date()) {
-      error7 = document.getElementById("error7");
+      const error7 = document.getElementById("error7");
       error7.innerText = "The Date should not be extend by current date";
       error7.style.display = "block";
       error7.style.color = "red";
@@ -226,7 +226,7 @@
     const { value, style } = e.target;
     console.log("Value", value);
     if (value.indexOf("https://www.linkedin.com/in/") !== 0) {
-      let error8 = document.getElementById("error8");
+      const error8 = document.getElementById("error8");
       error8.innerText = "Enter Valid LinkdIn URL";
       error8.style.display = "block";
       error8.style.color = "red";
@@ -242,7 +242,7 @@
     const { value, style } = e.target;
     console.log("Value", value);
     if (value.indexOf("https://github.com/") !== 0) {
-      let error9 = document.getElementById("error9");
+      const error9 = document.getElementById("error9");
       error9.innerText = "Enter Valid LinkdIn URL";
       error9.style.display = "block";
       error9.style.color = "red";
